@@ -62,7 +62,7 @@ function processRequest (req, res) {
 
 
 
-server.listen(PORT, (error) => {
+server.listen(process.env.PORT || PORT, (error) => {
     if (error) {
         console.log('Something went wrong');
     }
