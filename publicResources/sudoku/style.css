@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+:root {
+    --boardSize: 400px;
+}
+
+#boardContainer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: var(--boardSize);
+}
+
+#sudokuBoard {
+    background-color: aquamarine;
+    height: var(--boardSize);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input {
+    width: calc(var(--boardSize) / 10);
+    height: calc(var(--boardSize) / 10);
+    font-size: 25px;
+    text-align: center;
+    caret-color: transparent;
+}
+
+/* i is used to escape the number, as ID are not allowed to start with a number */
+#i3, #i6, #i12, #i15, #i21, #i24, #i30, #i33, #i39, #i42, #i48, #i51, #i57, #i60, #i66, #i69, #i75, #i78 {
+    margin-right: 5px;
+}
+
+#row3, #row6 {
+    margin-bottom: 5px; 
+}
+
+button {
+    color: brown;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: 2px solid aquamarine;
+    background-color: coral;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    font-size: 50px;
+}
+
+button:hover {
+    border: 2px solid coral;
+    background-color: aquamarine;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
