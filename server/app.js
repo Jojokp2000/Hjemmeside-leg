@@ -1,7 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 
-const PORT = 3000;
+const port = process.env.PORT || 3000;
 
 // Somehow create a server
 let server = http.createServer(requesthandler)
@@ -62,9 +62,9 @@ function processRequest (req, res) {
 
 
 
-server.listen(process.env.PORT || PORT, (error) => {
+server.listen(port, (error) => {
     if (error) {
         console.log('Something went wrong');
     }
-    console.log(`Server running on port ${PORT}`);
+    console.log(`Server running on port ${port}`);
 })
